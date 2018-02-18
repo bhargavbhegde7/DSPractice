@@ -1,0 +1,25 @@
+group 'com.practice.bhargav'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile project(':LinkedListDS')
+    compile project(':TreeDS')
+    compile project(':StackDS')
+}
+
+sourceSets {
+    test {
+        java {
+            srcDirs = ["test\\java\\com\\dstest\\practice\\LinkedListTest.java"]  // Note @Peter's comment below
+        }
+    }
+}

@@ -1,0 +1,4 @@
+rootProject.name = 'DSPractice'
+include ':LinkedListDS'
+include ':TreeDS'
+include ':StackDS'

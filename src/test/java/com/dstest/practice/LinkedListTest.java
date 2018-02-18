@@ -74,6 +74,34 @@ public class LinkedListTest {
     }
 
     @Test
+    public void deleteNodeByKeyLast(){
+        ListNode head = LinkedListUtils.getExampleList();
+        head = LinkedListUtils.deleteNodeByKey(9,head);
+        assertEquals("0  1  2  3  4  5  6  7  8  ", LinkedListUtils.toString(head));
+    }
+
+    @Test
+    public void deleteNodeByKeyFirst(){
+        ListNode head = LinkedListUtils.getExampleList();
+        head = LinkedListUtils.deleteNodeByKey(0,head);
+        assertEquals("1  2  3  4  5  6  7  8  9  ", LinkedListUtils.toString(head));
+    }
+
+    @Test
+    public void deleteNodeByKeyMiddle(){
+        ListNode head = LinkedListUtils.getExampleList();
+        head = LinkedListUtils.deleteNodeByKey(4,head);
+        assertEquals("0  1  2  3  5  6  7  8  9  ", LinkedListUtils.toString(head));
+    }
+
+    @Test
+    public void deleteNodeByKeyNotFound(){
+        ListNode head = LinkedListUtils.getExampleList();
+        head = LinkedListUtils.deleteNodeByKey(25,head);
+        assertEquals("0  1  2  3  4  5  6  7  8  9  ", LinkedListUtils.toString(head));
+    }
+
+    @Test
     public void searchIterativeLastElement(){
         ListNode head = LinkedListUtils.getExampleList();
         ListNode result = LinkedListUtils.searchIterative(head, 9);
@@ -127,5 +155,62 @@ public class LinkedListTest {
         ListNode head = LinkedListUtils.getExampleList();
         ListNode result = LinkedListUtils.searchRecursive(head, 25);
         assertEquals(null, result);
+    }
+
+    /*@Test
+    public void swapNodesWithouSwappingData(){
+        ListNode head = LinkedListUtils.getExampleList();
+        LinkedListUtils.swapNodesWithouSwappingData(head, 1, 4);
+        assertEquals("0  4  2  3  1  5  6  7  8  9  ", LinkedListUtils.toString(head));
+    }*/
+
+    @Test
+    public void getNodeByIndexLast(){
+        ListNode head = LinkedListUtils.getExampleList();
+        ListNode result = LinkedListUtils.getNodeByIndex(head, 9);
+        assertEquals(9, result.data);
+    }
+
+    @Test
+    public void getNodeByIndexFirst(){
+        ListNode head = LinkedListUtils.getExampleList();
+        ListNode result = LinkedListUtils.getNodeByIndex(head, 0);
+        assertEquals(0, result.data);
+    }
+
+    @Test
+    public void getNodeByIndexMiddle(){
+        ListNode head = LinkedListUtils.getExampleList();
+        ListNode result = LinkedListUtils.getNodeByIndex(head, 7);
+        assertEquals(7, result.data);
+    }
+
+    @Test
+    public void getNodeByIndexNotFound(){
+        ListNode head = LinkedListUtils.getExampleList();
+        ListNode result = LinkedListUtils.getNodeByIndex(head, 25);
+        assertEquals(null, result);
+    }
+
+    @Test
+    public void getMiddleNodeEven(){
+        ListNode head = LinkedListUtils.getExampleList();
+        ListNode result = LinkedListUtils.getMiddleNode(head);
+        assertEquals(5, result.data);
+    }
+
+    @Test
+    public void getMiddleNodeOdd(){
+        ListNode head = LinkedListUtils.getExampleList();
+        LinkedListUtils.addAtEnd(head, new ListNode(10));
+        ListNode result = LinkedListUtils.getMiddleNode(head);
+        assertEquals(5, result.data);
+    }
+
+    @Test
+    public void getNthFromEnd(){
+        ListNode head = LinkedListUtils.getExampleList();
+        ListNode result = LinkedListUtils.getNthFromEnd(head, 4);
+        assertEquals(6, result.data);
     }
 }

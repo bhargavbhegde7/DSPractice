@@ -203,4 +203,34 @@ public class LinkedListUtils {
         newListNode.setNext(bPrev.getNext());
         bPrev.setNext(newListNode);
     }
+
+    public static ListNode getNodeByIndex(ListNode head, int index){
+        int count = 0;
+        ListNode cur = head;
+        while(cur != null){
+            if(count == index){
+                return cur;
+            }
+            count++;
+            cur = cur.next;
+        }
+
+        return cur;
+    }
+
+    public static ListNode getMiddleNode(ListNode head){
+        ListNode slowPtr, fastPtr;
+        slowPtr = fastPtr = head;
+        while(fastPtr != null && fastPtr.next != null){
+            slowPtr = slowPtr.next;
+            fastPtr = fastPtr.next.next;
+        }
+
+        return slowPtr;
+    }
+
+    public static ListNode getNthFromEnd(ListNode head, int index){
+        int length = getLengthRecursive(head);
+        return getNodeByIndex(head, length - index);
+    }
 }

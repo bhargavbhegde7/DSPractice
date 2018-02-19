@@ -1,25 +1,35 @@
 group 'com.practice.bhargav'
 version '1.0-SNAPSHOT'
 
-apply plugin: 'java'
+//sourceCompatibility = 1.8
 
-sourceCompatibility = 1.8
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'org.junit.platform:junit-platform-gradle-plugin:1.0.1'
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'org.junit.platform.gradle.plugin'
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile(
+            'org.junit.jupiter:junit-jupiter-api:5.0.1'
+    )
+    testRuntime(
+            'org.junit.jupiter:junit-jupiter-engine:5.0.1',
+            'org.junit.vintage:junit-vintage-engine:4.12.1',
+            'org.junit.platform:junit-platform-launcher:1.0.1',
+            'org.junit.platform:junit-platform-runner:1.0.1'
+    )
     compile project(':LinkedListDS')
     compile project(':TreeDS')
     compile project(':StackDS')
-}
-
-sourceSets {
-    test {
-        java {
-            srcDirs = ["test\\java\\com\\dstest\\practice\\LinkedListTest.java"]  // Note @Peter's comment below
-        }
-    }
 }

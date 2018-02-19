@@ -2,11 +2,12 @@ package com.dstest.practice;
 
 import com.practice.linkedlist.LinkedListUtils;
 import com.practice.linkedlist.ListNode;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.Assert.assertEquals;
 
 public class LinkedListTest {
+
     @Test
     public void getExampleList(){
         ListNode head = LinkedListUtils.getExampleList();

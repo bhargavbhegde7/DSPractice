@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.dstest.practice.LinkedListTest" tests="29" skipped="0" failures="0" errors="0" timestamp="2018-02-19T15:23:19" hostname="bhegde-dt" time="0.01">
+  <properties/>
+  <testcase name="deleteNodeAtPositionFirst" classname="com.dstest.practice.LinkedListTest" time="0.002"/>
+  <testcase name="getNthFromEnd" classname="com.dstest.practice.LinkedListTest" time="0.0"/>
+  <testcase name="searchIterativeLastElement" classname="com.dstest.practice.LinkedListTest" time="0.0"/>
+  <testcase name="deleteNodeByKeyNotFound" classname="com.dstest.practice.LinkedListTest" time="0.001"/>
+  <testcase name="addAtEnd" classname="com.dstest.practice.LinkedListTest" time="0.0"/>
+  <testcase name="searchRecursiveNotFound" classname="com.dstest.practice.LinkedListTest" time="0.0"/>
+  <testcase name="searchRecursiveLastElement" classname="com.dstest.practice.LinkedListTest" time="0.0"/>
+  <testcase name="getNodeByIndexLast" classname="com.dstest.practice.LinkedListTest" time="0.0"/>
+  <testcase name="getNodeByIndexMiddle" classname="com.dstest.practice.LinkedListTest" time="0.0"/>
+  <testcase name="deleteNodeByKeyLast" classname="com.dstest.practice.LinkedListTest" time="0.0"/>
+  <testcase name="searchIterativeFirstElement" classname="com.dstest.practice.LinkedListTest" time="0.0"/>
+  <testcase name="deleteNodeItemNotFound" classname="com.dstest.practice.LinkedListTest" time="0.0"/>
+  <testcase name="getNodeByIndexFirst" classname="com.dstest.practice.LinkedListTest" time="0.0"/>
+  <testcase name="searchRecursiveFirstElement" classname="com.dstest.practice.LinkedListTest" time="0.0"/>
+  <testcase name="getMiddleNodeEven" classname="com.dstest.practice.LinkedListTest" time="0.0"/>
+  <testcase name="getLengthRecursive" classname="com.dstest.practice.LinkedListTest" time="0.001"/>
+  <testcase name="deleteNodeAtPositionMiddle" classname="com.dstest.practice.LinkedListTest" time="0.0"/>
+  <testcase name="searchIterativeMiddleElement" classname="com.dstest.practice.LinkedListTest" time="0.0"/>
+  <testcase name="getNodeByIndexNotFound" classname="com.dstest.practice.LinkedListTest" time="0.0"/>
+  <testcase name="getLastNode" classname="com.dstest.practice.LinkedListTest" time="0.0"/>
+  <testcase name="getLengthIterative" classname="com.dstest.practice.LinkedListTest" time="0.0"/>
+  <testcase name="deleteNodeByKeyFirst" classname="com.dstest.practice.LinkedListTest" time="0.0"/>
+  <testcase name="addAtStart" classname="com.dstest.practice.LinkedListTest" time="0.001"/>
+  <testcase name="searchIterativeNotFound" classname="com.dstest.practice.LinkedListTest" time="0.0"/>
+  <testcase name="getExampleList" classname="com.dstest.practice.LinkedListTest" time="0.0"/>
+  <testcase name="searchRecursiveMiddleElement" classname="com.dstest.practice.LinkedListTest" time="0.0"/>
+  <testcase name="deleteNodeAtPositionLast" classname="com.dstest.practice.LinkedListTest" time="0.0"/>
+  <testcase name="getMiddleNodeOdd" classname="com.dstest.practice.LinkedListTest" time="0.0"/>
+  <testcase name="deleteNodeByKeyMiddle" classname="com.dstest.practice.LinkedListTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

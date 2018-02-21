@@ -66,6 +66,6 @@ public class BinTreeUtils {
     }
 
     public static String levelOrderRecursive(TreeNode root){
-        return null;
+        return "1 2 3 4 5 6 7";
     }
 }

@@ -4,8 +4,8 @@ public class PrintEvenOddTester {
 
     public static void main(String... args) {
         Printer print = new Printer();
-        Thread tOdd = new Thread(new TaskOdd(print, 10));
-        Thread tEven = new Thread(new TaskEven(print, 10));
+        Thread tOdd = new Thread(new TaskOdd(print, 10), "Odd");
+        Thread tEven = new Thread(new TaskEven(print, 10), "Even");
         tOdd.start();
         tEven.start();
     }
@@ -17,7 +17,6 @@ class Printer {
     boolean isOdd = false;
 
     synchronized void printEven(int number) {
-
         while (isOdd == false) {
             try {
                 wait();

@@ -1,5 +1,8 @@
 package com.practice.tree;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class BinTreeUtils {
 
     /**
@@ -65,7 +68,61 @@ public class BinTreeUtils {
         ).trim();
     }
 
-    public static String levelOrderRecursive(TreeNode root){
-        return "1 2 3 4 5 6 7";
+    /*public static String level(Queue q, TreeNode cur){
+        if(cur == null){
+            return " ";
+        }
+        return (cur.getData()
+                +" "
+                +cur.getLeftChild()==null?"":level(q, cur.getLeftChild())
+                +" "
+                +cur.getRightChild()==null?"":level(q, cur.getRightChild())
+                +" "
+        ).trim();
+    }*/
+
+    public static void level2(Queue q, TreeNode cur){
+        if(cur!=null){
+            System.out.println(cur.getData());
+            q.remove();
+
+            if(cur.getLeftChild()!=null){
+                q.add(cur.getLeftChild());
+            }
+
+            if(cur.getRightChild()!=null){
+                q.add(cur.getRightChild());
+            }
+
+            level2(q, cur.getLeftChild());
+            level2(q, cur.getRightChild());
+        }
+    }
+
+    public static void levelOrderRecursive(TreeNode root){
+        Queue<TreeNode> q = new LinkedList<>();
+        q.add(root);
+        //return level(q, root);
+        level2(q, root);
+    }
+
+    public static String levelOrderIterative(TreeNode root) {
+        Queue<TreeNode> q = new LinkedList<>();
+        q.add(root);
+        String output = "";
+        while(!q.isEmpty()){
+            TreeNode cur = q.element();
+            output = output+" "+cur.getData();
+            q.remove();
+
+            if(cur.getLeftChild()!=null) {
+                q.add(cur.getLeftChild());
+            };
+            if(cur.getRightChild()!=null) {
+                q.add(cur.getRightChild());
+            };
+        }
+
+        return output.trim();
     }
 }

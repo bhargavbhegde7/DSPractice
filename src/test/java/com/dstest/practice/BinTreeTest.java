@@ -8,7 +8,12 @@ import static org.junit.Assert.assertEquals;
 
 public class BinTreeTest {
 
-    @Test
+    public static void main(String[] args) {
+        TreeNode root = BinTreeUtils.getSampleTree();
+        BinTreeUtils.levelOrderRecursive(root);
+    }
+
+    /*@Test
     public void preOrderRecursive(){
         TreeNode root = BinTreeUtils.getSampleTree();
         assertEquals("1 2 4 5 3 6 7",BinTreeUtils.preOrderRecursive(root));
@@ -31,4 +36,10 @@ public class BinTreeTest {
         TreeNode root = BinTreeUtils.getSampleTree();
         assertEquals("1 2 3 4 5 6 7",BinTreeUtils.levelOrderRecursive(root));
     }
+
+    @Test
+    public void levelOrderIterative(){
+        TreeNode root = BinTreeUtils.getSampleTree();
+        assertEquals("1 2 3 4 5 6 7",BinTreeUtils.levelOrderIterative(root));
+    }*/
 }
